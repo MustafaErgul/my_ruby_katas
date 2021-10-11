@@ -1,5 +1,8 @@
 def summation(num)
-  p num.times{num+num-1}
+  arr = Array.new
+  arr << num
+  num.times{arr << num-=1}
+  p arr.sum
 end
 
 summation(8)
