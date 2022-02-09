@@ -2,7 +2,7 @@
 
 def pig(str)
   arr2 = str.split(' ').map do |s|
-    arr = s.split(' ').map do |ch|
+    s.split(' ').map do |ch|
       chs = ch.chars
       f = chs.first
       chs.delete_at(chs.find_index(chs[0])) && chs.insert(-1, f).join("") + "ay"
