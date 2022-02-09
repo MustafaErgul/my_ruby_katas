@@ -5,11 +5,11 @@ def pig(str)
     s.split(' ').map do |ch|
       chs = ch.chars
       f = chs.first
-      chs.delete_at(chs.find_index(chs[0])) && chs.insert(-1, f).join("") + "ay"
-    end   
-  end if str !=~ /[[:punct:]]/
+      ch !~ /[[:punct:]]/ ? chs.delete_at(chs.find_index(chs[0])) && chs.insert(-1, f).join("") + "ay" : chs
+    end  
+  end 
   p arr2.concat.join(' ') 
 end
 
-
 pig('Pig latin is cool')
+pig('Pig latin is cool !')
