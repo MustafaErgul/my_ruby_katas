@@ -2,7 +2,7 @@
 
 def very_even(n)
   n = n.digits.sum while n.digits.size != 1
-  p n.digits.sum.even? ? true : false 
+  p n.digits.sum.even?
 end
 
 
